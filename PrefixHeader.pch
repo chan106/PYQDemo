@@ -1,0 +1,77 @@
+//
+//  PrefixHeader.pch
+//  PYQDemo
+//
+//  Created by Guo.JC on 2017/9/1.
+//  Copyright © 2017年 coollang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define         UIColorFromHex(s)       [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:1.0]
+
+/**
+ ----------------服务器配置----------------
+ */
+//是否测试服 1是，0否
+#define isTestServer                0
+#if isTestServer == 1
+//测试服
+#define     BaseAPI                 @"http://mlf.f3322.net:99/"
+#elif isTestServer == 0
+//正式服
+#define     BaseAPI                 @"http://victor.coollang.com/"
+#endif
+
+///用户ID关键字
+#define         kUserID                           @"userID"
+///获取当前用户ID
+#define         GET_CURRENT_USER_ID               [[NSUserDefaults standardUserDefaults]objectForKey:kUserID]
+///保存当前用户ID
+#define         SAVE_CURRENT_USER_ID(USER_ID)     NSUserDefaults *ud = [NSUserDefaults     standardUserDefaults];\
+[ud setObject:USER_ID forKey:kUserID];\
+[ud synchronize];
+
+#define         kThemeBackColor         UIColorFromHex(0x0a3388)
+#define         kThemeOrangeColor       UIColorFromHex(0xec6c00)
+
+#define         kWidth                  [UIScreen mainScreen].bounds.size.width
+#define         kHeight                 [UIScreen mainScreen].bounds.size.height
+
+#define         ScreenWTMP              [UIScreen mainScreen].bounds.size.width/375.0
+#define         ScreenHTMP              [UIScreen mainScreen].bounds.size.height/667.0
+
+/// 屏幕的长宽
+//#define kScreenWidth  ApplicationBounds().size.width
+//#define kScreenHeight ApplicationBounds().size.height
+#define kScreenWidth  kWidth
+#define kScreenHeight kHeight
+/// 纯代码适配等比例拉伸(以iPhone6/6s计算)
+#define kSCREEN_WIDTH_RATIO (kScreenWidth/375.0)
+#define kSCREEN_HEIGHT_RATIO (kScreenHeight<500?1:kScreenHeight/667.0) /// 5/5s以下不做等比例缩放
+#define kAutoWid(w) (w*kSCREEN_WIDTH_RATIO)
+#define kAutoHei(h) (h*kSCREEN_HEIGHT_RATIO)
+
+
+///判断是否登录
+#define         kIsLogin                @"isLogin"
+#define         SAVE_LOGIN_STATE(state) NSUserDefaults *saveUD = [NSUserDefaults standardUserDefaults];\
+[saveUD setBool:state forKey:kIsLogin];\
+[saveUD synchronize]
+#define         GET_LOGIN_STATE         [[NSUserDefaults standardUserDefaults]boolForKey:kIsLogin]
+
+
+
+#define         iPhone5                 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define         iPhone6                 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define         iPhone6BigMode          ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define         iPhonePlus              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define         iPhonePlusBigMode       ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) : NO)
+#endif /* PrefixHeader_pch */

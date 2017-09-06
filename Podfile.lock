@@ -1,0 +1,77 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - DACircularProgress (2.3.1)
+  - DateTools (1.5.0)
+  - HappyDNS (0.3.12)
+  - IDMPhotoBrowser (1.11.3):
+    - DACircularProgress
+    - pop
+    - SDWebImage (= 4.0.0)
+  - JSONModel (1.7.0)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (2.5.16)
+  - pop (1.0.10)
+  - Qiniu (7.1.6):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - TYAttributedLabel (2.6.2)
+  - UITableView+FDTemplateLayoutCell_Bell (1.4.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - DateTools (~> 1.5.0)
+  - IDMPhotoBrowser (~> 1.11.3)
+  - JSONModel
+  - MBProgressHUD (~> 0.9.1)
+  - MJExtension (~> 2.5.16)
+  - pop
+  - Qiniu
+  - Realm
+  - SDWebImage
+  - TYAttributedLabel (~> 2.6.2)
+  - UITableView+FDTemplateLayoutCell_Bell (~> 1.4.1)
+  - YYKit
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  DateTools: b93a2c2017747329c6077c7d7e8a75106e23d0d7
+  HappyDNS: 691a3041128055d09866f86e6e9ca90f24da1f18
+  IDMPhotoBrowser: b96159fe4adb991a844068eb17dab9c0b7d7e51a
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: b8c1321a77d91bcc007b94d38cbf5383c95ea30e
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  Qiniu: 8af94ce9b1611ed5f4350883e41d4a62cabad491
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  TYAttributedLabel: 1c1f1e7604043ba584e005d4fd3aee8a1a7a2020
+  UITableView+FDTemplateLayoutCell_Bell: 99fa3b3c1e200c8fceae1af39ba3787707d200cc
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 8b644648ee1e79a9e43505d8aaa41d1a36ae5f1f
+
+COCOAPODS: 1.1.0.rc.2
